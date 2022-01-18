@@ -1,3 +1,5 @@
+[![image](https://img.shields.io/npm/v/@defi-wonderland/keep3r-cli-job-boilerplate.svg?style=flat-square)](https://www.npmjs.org/package/@defi-wonderland/keep3r-cli-job-boilerplate)
+
 # Keep3r CLI Job Boilerplate
 
 `@defi-wonderland/keep3r-cli-job-boilerplate` aims to provide protocols an easy way of creating a CLI compatible job, just start by forking this repo.
