@@ -4,7 +4,7 @@ This is the most complex of the test jobs despite not using a stealth relayer. T
 
 ## Config path
 
-`node_modules/@keep3r-network/cli-sample-jobs/dist/goerli/job-strategies`
+`node_modules/@defi-wonderland/keep3r-cli-job-boilerplate/dist/src/goerli/job-strategies`
 
 ## Keeper Requirements
 

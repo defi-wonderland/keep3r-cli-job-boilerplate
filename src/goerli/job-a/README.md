@@ -4,7 +4,7 @@ This is the simplest job we can find as well as the simplest script to write. It
 
 ## Config path
 
-`node_modules/@keep3r-network/cli-sample-jobs/dist/goerli/job-a`
+`node_modules/@defi-wonderland/keep3r-cli-job-boilerplate/dist/src/goerli/job-a`
 
 ## Keeper Requirements
 

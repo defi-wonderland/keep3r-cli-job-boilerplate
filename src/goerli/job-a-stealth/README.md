@@ -4,7 +4,7 @@ This is a slightly more complicated job than `JobA` as it uses a stealth mechani
 
 ## Config path
 
-`node_modules/@keep3r-network/cli-sample-jobs/dist/goerli/job-a-stealth`
+`node_modules/@defi-wonderland/keep3r-cli-job-boilerplate/dist/src/goerli/job-a-stealth`
 
 ## Keeper Requirements
 
