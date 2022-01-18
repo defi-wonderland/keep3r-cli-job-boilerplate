@@ -2,9 +2,6 @@ import { getStealthHash, Job, JobWorkableGroup, makeid, prelog, toKebabCase } fr
 import { getGoerliSdk } from '../../eth-sdk-build';
 import metadata from './metadata.json';
 
-const jobAddress = '0x9DC52d978290f13b73692C5AeA21B4C8954e909A';
-const stealthRelayerAddress = '0xD44A48001A4BAd6f23aD8750eaD0036765A35d4b';
-
 const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
   // setup logs
   const correlationId = toKebabCase(metadata.name);
@@ -45,7 +42,7 @@ const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
 
       // create work tx
       const tx = await stealthRelayer
-        .populateTransaction.execute(jobAddress, workData, stealthHash, args.targetBlock + index, {
+        .populateTransaction.execute(job.address, workData, stealthHash, args.targetBlock + index, {
           nonce: args.keeperNonce,
           gasLimit: args.block.gasLimit,
           type: 2,
