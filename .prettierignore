@@ -1,0 +1,25 @@
+# General
+.prettierignore
+.solhintignore
+.husky
+.gitignore
+.gitattributes
+.env.example
+.env
+*.code-workspace
+.DS_STORE
+LICENSE
+dist
+CHANGELOG.md
+
+# JS
+node_modules
+package-lock.json
+yarn.lock
+yarn-error.log
+eth-sdk/abis
+src/eth-sdk-build
+
+# Docs
+docs
+README.*
