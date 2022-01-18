@@ -1,0 +1,10 @@
+# General
+node_modules
+.DS_STORE
+yarn-error.log
+dist
+build
+_build
+.eslintcache
+eth-sdk/abis
+src/eth-sdk-build

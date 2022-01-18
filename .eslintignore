@@ -1,0 +1,3 @@
+**/*.validator.*ts
+src/eth-sdk-build
+dist
