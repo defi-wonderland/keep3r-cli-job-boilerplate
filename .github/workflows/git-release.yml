@@ -10,12 +10,13 @@ jobs:
   tag:
     name: Create tag for new version
     runs-on: ubuntu-latest
+    if: "!github.event.created"
     outputs:
       tag_name: ${{ steps.create_new_tag.outputs.tag }}
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 1
+          fetch-depth: 2
       - uses: salsify/action-detect-and-tag-new-version@v2
         id: create_new_tag
 
