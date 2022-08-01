@@ -24,7 +24,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && yarn eth-sdk && tsc -p tsconfig.build.json && cp -r ./src/eth-sdk-build ./dist/src",
+    "build": "rm -rf dist && yarn eth-sdk && tsc -p tsconfig.build.json && cp -r ./src/eth-sdk-build ./dist/src",
     "compile": "hardhat compile",
     "lint": "eslint . --ext .ts --cache --fix",
     "prepare": "husky install",
