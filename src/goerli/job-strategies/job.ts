@@ -17,8 +17,8 @@ const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
   logConsole.log(`Trying to work`);
 
   // setup job with default fork provider
-	const signer = args.fork.ethersProvider.getSigner(args.keeperAddress);
-	const { jobStrategies: defaultJob } = getGoerliSdk(signer);
+  const signer = args.fork.ethersProvider.getSigner(args.keeperAddress);
+  const { jobStrategies: defaultJob } = getGoerliSdk(signer);
 
   // get strategies to work
   const strategies: string[] = args.retryId ? [args.retryId] : await defaultJob.jobs();
@@ -31,7 +31,6 @@ const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
 
   // for each fork
   const workPromises = forks.map(async (fork, forkIndex) => {
-
     // setup job using fork provider
     const signer = fork.ethersProvider.getSigner(args.keeperAddress);
     const { jobStrategies: forkJob } = getGoerliSdk(signer);
@@ -40,7 +39,6 @@ const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
 
     // for each strategy
     for (const [index, strategy] of forkStrategies.entries()) {
-
       // setup logs for strategy
       const strategyIndex = forkIndex * maxStrategiesPerFork + index;
       const strategyLogId = `${logMetadata.logId}-${makeid(5)}`;
@@ -78,7 +76,6 @@ const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
           workableGroups,
           correlationId: strategy,
         });
-
       } catch (err: any) {
         // handle error logs
         const isExpectedError = expectedErrors.find((expectedError) => {

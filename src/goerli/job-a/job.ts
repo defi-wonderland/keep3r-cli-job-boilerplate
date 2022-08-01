@@ -21,8 +21,8 @@ const getWorkableTxs: Job['getWorkableTxs'] = async (args) => {
   logConsole.log(`Trying to work`);
 
   // setup job
-	const signer = args.fork.ethersProvider.getSigner(args.keeperAddress);
-	const { jobA: job } = getGoerliSdk(signer);
+  const signer = args.fork.ethersProvider.getSigner(args.keeperAddress);
+  const { jobA: job } = getGoerliSdk(signer);
 
   try {
     // check if job is workable
