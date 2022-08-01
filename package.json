@@ -1,7 +1,7 @@
 {
-  "name": "@defi-wonderland/keep3r-cli-job-boilerplate",
-  "version": "1.0.2",
-  "description": "Keep3r CLI Job Boilerplate",
+  "name": "keep3rTest",
+  "version": "1.0.0",
+  "description": "keep3rTest",
   "keywords": [
     "keep3r",
     "cli",
@@ -24,7 +24,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && yarn eth-sdk && tsc -p tsconfig.build.json && cp -r ./src/eth-sdk-build ./dist/src",
+    "build": "rimraf dist && yarn eth-sdk && tsc -p tsconfig.build.json && cp -r ./src/eth-sdk-build ./dist/src",
     "compile": "hardhat compile",
     "lint": "eslint . --ext .ts --cache --fix",
     "prepare": "husky install",
